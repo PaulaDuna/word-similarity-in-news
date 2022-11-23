@@ -20,6 +20,7 @@ for date, title, article in zip(dates, titles, articles):
   for word in keywords:
     if word.lower() in article.lower() and title not in titles_search:
       dates_search.append(date)
+      titles_search.append(title)
       articles_search.append(article)
 
 with open("data/dates_search_2020.json", 'w') as f:
